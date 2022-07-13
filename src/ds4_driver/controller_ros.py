@@ -285,26 +285,30 @@ class ControllerRos(Controller):
             status.axis_right_y,
             status.axis_l2,
             status.axis_r2,
+            status.button_dpad_up - status.button_dpad_down,
+            status.button_dpad_left - status.button_dpad_right,
+            status.imu.linear_acceleration.x,
+            status.imu.linear_acceleration.y,
+            status.imu.linear_acceleration.z,
+            status.imu.angular_velocity.x,
+            status.imu.angular_velocity.y,
+            status.imu.angular_velocity.z
         ]
         msg.buttons = [
             status.button_square,
-            status.button_triangle,
-            status.button_circle,
             status.button_cross,
+            status.button_circle,
+            status.button_triangle,
             status.button_l1,
-            status.button_l2,
             status.button_r1,
+            status.button_l2,
             status.button_r2,
             status.button_share,
             status.button_options,
-            status.button_ps,
-            status.button_trackpad,
             status.button_l3,
             status.button_r3,
-            status.button_dpad_left,
-            status.button_dpad_up,
-            status.button_dpad_right,
-            status.button_dpad_down,
+            status.button_ps,
+            status.button_trackpad
         ]
         return msg
 
